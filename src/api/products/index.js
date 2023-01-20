@@ -17,7 +17,10 @@ productRouter.post("/", async (req, res, next) => {
 
 productRouter.get("/", async (req, res, next) => {
   try {
-    const products = await ProductModel.find();
+    const products = await ProductModel.find({
+      category: "smartphones",
+      price: 500,
+    });
     res.send(products);
   } catch (error) {
     next(error);
