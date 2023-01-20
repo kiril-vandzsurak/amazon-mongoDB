@@ -7,12 +7,15 @@ import {
   notFoundHandler,
   genericErrorHandler,
 } from "./errorHandler.js";
+import productRouter from "./api/products/index.js";
 
 const server = express();
 const port = process.env.PORT || 3001;
 
 server.use(cors());
 server.use(express.json());
+
+server.use("/products", productRouter);
 
 server.use(badRequestHandler);
 server.use(notFoundHandler);
