@@ -28,5 +28,8 @@
     "http-errors": "^2.0.0",
     "mongoose": "^6.8.4",
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "query-to-mongo": "^0.10.2"
   }
 }
