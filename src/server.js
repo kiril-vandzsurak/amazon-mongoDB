@@ -12,7 +12,7 @@ import reviewRouter from "./api/reviews/index.js";
 import userRouter from "./api/user/index.js";
 
 const server = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 server.use(cors());
 server.use(express.json());

@@ -102,7 +102,7 @@ userRouter.post("/:userId/cart", async (req, res, next) => {
         {
           owner: req.params.userId,
           status: "Active",
-          "products.productId": bookId,
+          "products.productId": productId,
         },
         { $inc: { "products.$.quantity": quantity } },
         { new: true, runValidators: true }
